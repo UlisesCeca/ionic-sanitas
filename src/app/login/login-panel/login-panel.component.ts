@@ -67,7 +67,7 @@ export class LoginPanelComponent implements OnInit {
    * @param form formulario a comprobar.
    * @returns un array de aquellos controles que no están bien informados.
    */
-  private getFormErrors(form: FormGroup): Array<string> {
+  public getFormErrors(form: FormGroup): Array<string> {
     const invalid: Array<string> = [];
 
     for (const name in form.controls) {

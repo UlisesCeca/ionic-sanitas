@@ -22,4 +22,20 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('#login() show a message in console', () => {
+    spyOn(console, 'log');
+    component.login({
+      email: 'email@email.es',
+      password: '12345',
+      remember: false
+    })
+    expect(console.log).toHaveBeenCalledTimes(2);
+  });
+
+  it('#showLoginError() show a message in console', () => {
+    spyOn(console, 'log');
+    component.showLoginError("error")
+    expect(console.log).toHaveBeenCalledTimes(2);
+  });
 });

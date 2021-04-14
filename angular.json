@@ -34,9 +34,7 @@
             "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "src/theme/variables.scss","src/global.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [
-              "node_modules/jQuery/lib/node-jquery.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -97,9 +95,7 @@
             "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [
-              "node_modules/jQuery/lib/node-jquery.js"
-            ],
+            "scripts": [],
             "assets": [
               {
                 "glob": "favicon.ico",
