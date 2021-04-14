@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="form-container">
+        <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+            
+            <!-- CAT PICTURE-->
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <img src="../../../../assets/logo.jpg" class="photo" alt="Logo">
+                </div>
+            </div>
+            
+            <!-- TITLE-->
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <h2>Prueba técnica</h2>
+                </div>
+            </div>
+
+            <!-- EMAIL-->
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <div class="input-group mb-3">
+                        <mat-icon aria-hidden="false" aria-label="Icono de contraseña">person</mat-icon>
+                        <input type="text" class="form-control" placeholder="Email" aria-label="Email del usuario" formControlName="email">
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASSWORD-->
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <div class="input-group mb-3">
+                        <mat-icon aria-hidden="false" aria-label="Icono de contraseña">lock_outline</mat-icon>
+                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña del usuario" formControlName="password">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- REMEMBER-->
+            <div class="row">
+                <div class="col text-left">
+                    <p>Recordar</p>
+                </div>
+                <div class="col text-right">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="rememberSwitch" formControlName="remember">
+                        <label class="custom-control-label" for="rememberSwitch"></label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- LOGIN BUTTON-->
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-outline-primary">Acceder</button>
+                </div>
+            </div>
+                        
+            <!-- FORM MESSAGE-->
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <br>
+                    <p *ngIf="loginStatus != undefined && loginStatus.show">{{ loginStatus.message }}</p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
